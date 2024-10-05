@@ -1,0 +1,35 @@
+body{
+    background-color: gray;
+    font-size: 3em;
+}
+
+section{
+    margin: 3em;
+    display: block;
+    background-color: aliceblue;
+    text-align: center;
+    opacity: 0.9;
+    border-color: black;
+    border: 1px;
+}
+
+form{
+    padding-bottom: 3rem;
+}
+input{
+    border-color: gray;
+    margin: 1em;
+    margin-bottom: 1rem;
+    padding: 1.1em;
+}
+button{
+    border-radius: 0.5%;
+    text-shadow: 0.05em 0.05em 0.05em #666666;
+    font-size: 4rem;
+    background-color: #666666;
+    color: white;
+}
+
+label{
+    size: 5rem;
+}
