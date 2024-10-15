@@ -9,9 +9,14 @@
     </script>
 </head>
 <body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/register">registro</a>
+        <a href="/consult_page">consulta</a>
+    </nav>
     <section>
         <h1>Register</h1>
-        <form action="registro" method="post" enctype="multipart/form-data">
+        <form action="/registro" method="post" enctype="multipart/form-data">
             <label for="ID">Id</label><input type="number" id="ID" name="ID" placeholder="Id" required><br/>
             <label for="NAME_USER">Name</label><input type="text" id="NAME_USER" name="NAME_USER" placeholder="Name" required><br/>
             <label for="LAST_NAME">LastName</label><input type="text" id="LAST_NAME" name="LAST_NAME" placeholder="LastName" required></br>
