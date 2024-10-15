@@ -1,0 +1,12 @@
+function consult_user(){
+    ID = document.getElementById('ident').value
+    fetch('/consult_user',{
+        "method":"post",
+        "headers":{"Content-Type":"application/json"},
+        "body": JSON.stringify(ID)
+    })
+    .then(resp => resp.json())
+    .then(data=>{
+        document.getElementById("txt-response").value = data.NAME_USER + " " + data.LAST_NAME
+    })
+}
