@@ -1,9 +1,9 @@
 function consult_user(){
-    ID = document.getElementById('ident').value
+    id = document.getElementById('ident').value
     fetch('/consult_user',{
         "method":"post",
         "headers":{"Content-Type":"application/json"},
-        "body": JSON.stringify(ID)
+        "body": JSON.stringify(id)
     })
     .then(resp => resp.json())
     .then(data=>{

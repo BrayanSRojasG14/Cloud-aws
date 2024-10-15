@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request
-from database.db import connectionsql, add_user 
+from flask import Flask, render_template, request, jsonify
+from database.db import *
 #from controllers.admin_s3 import *
 
 app= Flask(__name__)
@@ -12,8 +12,8 @@ def home_page():
 def register():
     return render_template("register.html")
 
-@app.route('/consult')
-def consult():
+@app.route('/consult_page')
+def consult_page():
     return render_template("consult.html")
 
 @app.route('/registro', methods=['post'])
@@ -38,6 +38,19 @@ def registro():
     else:
         return "Error creating the user"
 """
+
+@app.route('/consult_user', methods=["post"])
+def consult_user():
+    id = request.get_json()
+    print(id)
+    result = consult(id)
+    resp_data = {
+        'NAME_USER':result[0][1],
+        'LAST_NAME':result[0][2],
+        'BIRTHDAY':result[0][3]
+    }
+    return jsonify(resp_data)
+
 if __name__ == "__main__":
     ip = "0.0.0.0"
     port = "5000"

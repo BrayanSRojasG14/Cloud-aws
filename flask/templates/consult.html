@@ -7,9 +7,17 @@
     <title>App Web - Consult</title>
 </head>
 <body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/register">registro</a>
+        <a href="/consult_page">consulta</a>
+    </nav>
     <h1>Consult</h1>
     <label for="Id">Id</label><input type="number" name="ident" id="ident">
-    <textarea name="txt-response" id="txt-response"></textarea>
+    <br>
+    <div class="">
+        <textarea name="txt-response" id="txt-response"></textarea>
+    </div>
     <button onclick="consult_user()">Consultar</button>
 </body>
 </html>
