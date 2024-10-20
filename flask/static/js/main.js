@@ -8,5 +8,5 @@ function register_a(){
 }
 
 function consult(){
-    window.location = "/consult"
+    window.location = "/consult_page"
 }
